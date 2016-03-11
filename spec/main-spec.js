@@ -1,4 +1,5 @@
-var main = require('../main');
+'use strict'
+let main = require('../main');
 
 describe('lcdDigit()', function() {
   
@@ -7,7 +8,7 @@ describe('lcdDigit()', function() {
 
     main.lcdDigit("9");
 
-    var expectText ="._.\n|_|\n..|\n";
+    let expectText ="._.\n|_|\n..|\n";
 
     expect(console.log).toHaveBeenCalledWith(expectText);
   });
@@ -17,7 +18,7 @@ describe('lcdDigit()', function() {
 
     main.lcdDigit("91");
 
-    var expectText ="._. ...\n|_| ..|\n..| ..|\n";
+    let expectText ="._. ...\n|_| ..|\n..| ..|\n";
 
     expect(console.log).toHaveBeenCalledWith(expectText);
   });
@@ -27,7 +28,7 @@ describe('lcdDigit()', function() {
 
     main.lcdDigit("910");
 
-    var expectText ="._. ... ._.\n|_| ..| |.|\n..| ..| |_|\n";
+    let expectText ="._. ... ._.\n|_| ..| |.|\n..| ..| |_|\n";
 
     expect(console.log).toHaveBeenCalledWith(expectText);
   });

@@ -3,13 +3,13 @@
 let fixtures = require('./spec/fixtures');
 
 function split(number) {
-  var digits = number.split('');
+  let digits = number.split('');
   return digits;
 }
 
 
 function translate(digits,strings){
-  var stringSet = [];
+  let stringSet = [];
 
   for(let i = 0;i<3;i++){
     let string = digits.reduce((pstring,cdigit)=>{
