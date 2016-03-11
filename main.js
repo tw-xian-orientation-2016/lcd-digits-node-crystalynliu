@@ -1,4 +1,6 @@
-var fixtures = require('./spec/fixtures');
+'use strict'
+
+let fixtures = require('./spec/fixtures');
 
 function split(number) {
   var digits = number.split('');
@@ -9,36 +11,30 @@ function split(number) {
 function translate(digits,strings){
   var stringSet = [];
 
-  for(var i = 0;i<3;i++){
-    var string="";
-    digits.forEach(function(digit){
-      string += strings[digit][i] + " ";
-    })
-    string = string.substring(0,string.length-1)+"\n";
-    stringSet.push(string);
+  for(let i = 0;i<3;i++){
+    let string = digits.reduce((pstring,cdigit)=>{
+      pstring += `${strings[cdigit][i]} `;
+      return pstring;
+    },'');
+    stringSet.push(`${string.substring(0,string.length-1)}\n`);
   }
-  
   return stringSet;
 }
 
-
-
 function printDigit(stringSet){
-  var text="";
   
-  stringSet.forEach(function(string){
-    text+=string;
+  return stringSet.reduce((pString,cString)=>{
+    pString += cString;
+    return pString;
   })
-
-  return text;
 }
 
 
 function lcdDigit(number){
-  var strings = fixtures();
+  let strings = fixtures();
 
-  var digits = split(number);
-  var stringSet = translate(digits,strings);
+  let digits = split(number);
+  let stringSet = translate(digits,strings);
   console.log(printDigit(stringSet));
 }
 exports.printDigit = printDigit;
