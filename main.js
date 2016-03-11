@@ -22,7 +22,7 @@ function translate(digits,strings){
 }
 
 function printDigit(stringSet){
-  
+
   return stringSet.reduce((pString,cString)=>{
     pString += cString;
     return pString;
