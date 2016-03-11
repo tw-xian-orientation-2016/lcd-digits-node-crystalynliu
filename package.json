@@ -1,0 +1,14 @@
+{
+  "name": "lcd-digits-node-crystalynliu",
+  "version": "0.1.0",
+  "description": "Your task is to create an LCD string representation of an integer value using a 3x3 grid of space, underscore, and pipe characters for each digit. Each digit is shown below (using a dot instead of a space)",
+  "main": "main.js",
+  "scripts": {
+    "test": "jasmine"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jasmine": "^2.4.1"
+  }
+}
